@@ -1,0 +1,163 @@
+:root {
+    --fond: #e0f7ff;
+    --carte: #ffffff;
+    --texte: #222222;
+    --titre: #192bc2ff;
+    --lien: #449dd1ff;
+    --lien-hover: #150578ff;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: var(--fond);
+    color: var(--texte);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--carte);
+    box-shadow: 0 2px 8px #00000014;
+}
+
+header img {
+    height: 110px;
+    border-radius: 16px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header a {
+    padding: 10px 16px;
+    border: 2px solid var(--lien);
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--lien);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+p{
+    text-align: justify;
+}
+
+header a:hover{
+    color: #ffffff;
+    background-color: var(--lien-hover);
+}
+
+main {
+    max-width: 960px;
+    margin: 36px auto;
+    padding: 0 20px 40px;
+}
+
+section {
+    background: var(--carte);
+    border-radius: 20px;
+    padding: 28px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 16px #0000000d;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+    display: inline-flex;
+    align-items: center;
+    color: var(--titre);
+    font-family: 'Fredoka One', cursive;
+}
+
+.lien-ancre {
+    margin-right: 12px;
+    text-decoration: none;
+    color: var(--lien);
+    font-size: 1.2rem;
+}
+
+section p {
+    margin: 0;
+    color: #444444;
+}
+
+
+.galerie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.element-galerie {
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px #0000001a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.element-galerie:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px #00000026;
+}
+
+.element-galerie img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.liste-blagues {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.carte-blagues {
+    background: linear-gradient(135deg, #f0f4ff 0%, #ffffff 100%);
+    border-left: 4px solid var(--titre);
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.carte-blagues:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px #0000001a;
+}
+
+.texte-blagues {
+    margin: 0;
+    color: #333;
+}
+
+.lien-site {
+    text-align: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 720px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header img {
+        margin-bottom: 16px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}
